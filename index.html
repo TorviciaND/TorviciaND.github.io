@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name = "author" content = "Vickie Woodard">
+	<meta name = "content" content = "Statistics Teaching Examples Blog">
+	<meta name = "date" content = "Fall 2020">
+	
+	<title>Statistics Education Resource Blog</title>
+	<meta name = "keywords" content = "DOE Examples">
+	<meta charset = "UTF-8">
+	
+	<link rel = "stylesheet" type = "text/css" href = "index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+</head>
+
+<body style = "background-color:black">
+	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
+	
+	<div id = "header">
+		<h1 style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"> Statistics Education Resource Blog</h1>
+		<br><br><br><br>
+	</div>
+	
+	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
+	<div>
+	
+		<div id = "container1" class = "container">
+
+			<div id = "topleft" class = "topic intro left" >
+				<div class = "leftside" style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #48784E;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Introductory and Secondary Statistics</h3>
+				<ul style = "position: relative; top:-100%; margin-left:5%">
+				<li>Sampling</li>
+				<li>Exploratory Data Analysis</li>
+				<li>Sampling Distributions for the Sample Mean</li>
+				<li><a href = "#samplingdistributionsproportions">Sampling Distributions for the Sample Proportion</a></li>
+				<li>Hypothesis Testing</li>
+				<li>Confidence Intervals</li>
+				</ul>
+			</div>
+
+			<div id = "topright" class = "topic doe right">
+				<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #1A5276;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Design of Experiments</h3>
+					<ul style = "position: relative; top:-100%; margin-left:5%">
+					<li><a href = "#matchedpairsdesign">Matched Pairs Design</a></li>
+					<li>Completely Randomized Designs</li>
+					<li>Factorial Designs</li>
+					<li>Nested Designs</li>
+					<li>Block Designs</li>
+					<li>Split Plot Designs</li>
+					<li>Propensity Score Analysis</li>
+					<li>Fixed and Random Effects</li>
+				</ul>
+			</div>	
+			
+			<!--
+			<div id = "midleft" class = "topic mathstat">
+			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -10%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #951602;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Mathematical Statistics</h3>
+				<ul style = "position: relative; top:-100%;">
+					<li>Maximium Likelihood Estimators</li>
+					<li>Method of Moments Estimators</li>
+				</ul>
+			</div>
+			-->
+			
+		</div>
+		
+		<div id = "container2" class = "container" >
+			
+			<div id = "bottomleft" class = "topic prob left">
+			<div class = "leftside" style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #951602;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Probability and Mathematical Statistics</h3>
+				<ul style = "position: relative; top:-100%; margin-left:5%">
+					<li>Discrete Distributions</li>
+					<li>Continuous Distributions</li>
+					<li>Bayes' Theorem</li>
+					<li>Maximium Likelihood Estimators</li>
+					<li>Method of Moments Estimators</li>
+				</ul>
+			</div>
+
+			<div id = "bottomright" class = "topic regression right">
+			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #C8BB06;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Regression</h3>
+				<ul style = "position: relative; top:-100%; margin-left:5%">
+					<li>Simple Linear Regression</li>
+					<li>Multiple Linear Regression</li>
+					<li>Regression Assumptions</li>
+					<li>Principal Components Analysis</li>
+					<li>Logistic Regression</li>
+					<li>Baseline Category Logit Models</li>
+					<li>Proportional Odds Models</li>
+					<li>Propensity Score Analysis</li>
+				</ul>
+			</div>	
+
+			<!--
+			<div id = "midright" class = "topic ml">
+			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -10%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #C8BB06;"></path></svg></div>
+				<h3 class = topictitle style = "position: relative; top:-100%;">Machine Learning</h3>
+				<ul style = "position: relative; top:-100%;">
+					<li>Random Forrests</li>
+					<li>K-Nearest Neighbors</li>
+				</ul>
+			</div>
+			-->
+		</div>
+			
+		<div id = "container3" style = "display:none" class = "container">
+
+			<div id = "bottomleft" class = "topic">
+				<h3 class = topictitle>Stochastic Processes</h3>
+			</div>
+
+			<div id = "bottomcenter" class = "topic">
+				<h3 class = topictitle>Time Series Analysis</h3>
+			</div>	
+
+			<div id = "botomright" class = "topic">
+				<h3 class = topictitle>Spatial Statistics</h3>
+			</div>		
+		</div>
+	</div>
+	
+	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
+
+	<div id = "matchedpairsdesign" class = "posting doe">
+		<h2 class = topictitle style = "color:white">Design of Experiments: Matched Pairs Design</h2>
+		<h2>Author: Victoria Woodard</h2>
+		<h3>Date: August 5, 2020</h3>
+		<br><i>This example was borrowed from Randal Blackwood's best practices presentation at the 2016 AP Statistics reading.</i></br>		
+		<hr>
+		<br>
+		
+		For those not familiar, <b>matched pairs designs</b> are used when two measurements are made on each of the experimental units and a comparison of the two sets of measurements is desired. Since the data is matched on the experimental unit, the traditional independence assumption for analysis is violated. Yet this method of design is often used since it is good at reducing the variability between groups.<br><br>
+		
+		I gave this problem to students in a design of experiments course. They were asked to create and impliment the experiment using the following prompt: 
+		<br>
+		
+		<img src = "matched pairs.png" class = "example">
+		
+		<br>
+		
+		<em>Students’ Experimental Design</em>
+		
+		<p>Through a lot prompting on my part, students came to the consensus that they should be the participants, throw the pool noodle once with each arm and measure how far it travelled on each throw. They set up a plane with the tape measurers to account for vertical and horizontal motion. Each participant started at a point at the corner of the plane and then threw the pool noodle as far as they could. A second student spotted the point where the tip of the noodle first hit the ground and two other students were responsible for determining how far the pool noodle traveled on the vertical and horizontal axes. The total distance the pool noodle was thrown was calculated using the Pythagorean Theorem.
+
+		<p>Since this problem was posed in the section about matched pairs experiments, students recognized that each participant needed to throw the pool noodle twice, once with their dominant arm and once with their non-dominant arm. To apply randomization to the scenario, students flipped a coin. If the coin came up as heads, they threw with their dominant arm first. If the coin came up as tails, they threw with their non-dominant arm first. 
+		
+		<br><br>
+
+		<em>Instructor Comments</em><br>
+		
+		<p>Since this was the first experiment that students designed for the course, their description of how to collect the data was originally very limited. Despite giving them several minutes in class to discuss in their groups, most groups’ plans were akin to “we will each throw the pool noodle with each of our arms and record where it lands.” I had anticipated this and was prepared to ask them leading questions to eventually get them to the design that was described above.
+
+		<p>One of the questions that I asked the students during this time was where the data should be collected. It was easy to convince the students that the only place that would allow for enough space for the pool noodles to be thrown, would be outside. This was done strategically, knowing that wind would likely be a confounding variable in the study. The purpose of choosing this location, was so that I could “break” the design that the students came up with so that they would think about such things in the future.
+
+		<p>Prior to data collection, it may also be helpful to set up a Google Sheet and share it with all of the students in the course. During our planning phase, students stated that they would write the results on a sheet of paper and then share it with everyone. However when students went to analyze data, it took up a lot of class time to wait for the one student to create and share the spreadsheet with the rest of the class. While this may be a good lesson for students to learn, I felt it was not a good use of class time.
+
+		<p>Because of the small class size, the experiment was completed in one class period with only one pool noodle. However, for larger classes, it is recommended that the students be split into groups with multiple setups. This could later lead to a discussion about blocking variables. Additionally, this experiment could easily be modified to a two sample independent t-test if desired. This could help with time constraints if this is being implemented in a large class, since each student will only be throwing the pool noodle once.<br>
+
+		
+		
+	</div>
+
+	<div id = "samplingdistributionsproportions" class = "posting intro">
+		<h2 class = topictitle style = "color:white; margin-left:-50px; margin-top:15%; white-space:nowrap">Sampling Distribution for the Sample Proportion</h2>
+		<h2>Author: Victoria Woodard</h2>
+		<h3>Date: August 3, 2020</h3>
+		<hr>
+		<br>
+		
+		The <b>Sampling Distribution</b> of a sample statistic, is the distribution of all possible values that the statistic can take on for a given sample size. We use the sampling distribution to model possible statistics and determine if certain values are unreasonable given the contraints of the problem. The following example can be used to find the sampling distribution of the sample proportion.
+		
+		Supplies: Bead Boxes, Sampling Paddles
+		
+		<hr>
+		
+		<iframe id = shinySamplingDistribution src ="https://victoria-weber-nd.shinyapps.io/SampDistProps/"= style = "border:1px; width: 95%; height: 1000px;"</iframe>
+	</div>
+	
+	<div id = "bottombar" style = "width:100%; background-color:black; text-align:left; color:white">
+		&copy; 2020 Victoria Woodard<br>
+		<i class="fa fa-envelope"></i> <a href = "mailto:vweber1@nd.edu" style = "color:white">vweber1@nd.edu</a>
+	</div>
+	
+</body>
+</html>
