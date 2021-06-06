@@ -1,131 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name = "author" content = "Vickie Woodard">
-	<meta name = "content" content = "Statistics Teaching Examples Blog">
-	<meta name = "date" content = "Fall 2020">
-	
-	<title>Statistics Education Resource Blog</title>
-	<meta name = "keywords" content = "DOE Examples">
-	<meta charset = "UTF-8">
-	
 	<link rel = "stylesheet" type = "text/css" href = "index.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
+	<script src = "TetraMaster.js"></script>
+
 </head>
 
-<body style = "background-color:black">
-	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
-	
-	<div id = "header">
-		<h1 style = "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"> Statistics Education Resource Blog</h1>
-		<br><br><br><br>
+<body>
+<div class = "mainPage">
+	<div class = "mainContainer" id = "mainContainer">
+		<script> 
+			var isClicked;
+			var toBePlaced;
+			blockers = createBlockers();
+			usedSlots = blockers;
+			createBoard();
+			createScore();
+			
+		</script>
 	</div>
 	
-	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
-	<div>
-	
-		<div id = "container1" class = "container">
-
-			<div id = "topleft" class = "topic intro left" >
-				<div class = "leftside" style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #48784E;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Introductory and Secondary Statistics</h3>
-				<ul style = "position: relative; top:-100%; margin-left:5%">
-				<li>Sampling</li>
-				<li>Exploratory Data Analysis</li>
-				<li>Sampling Distributions for the Sample Mean</li>
-				<li><a href = "#samplingdistributionsproportions">Sampling Distributions for the Sample Proportion</a></li>
-				<li>Hypothesis Testing</li>
-				<li>Confidence Intervals</li>
-				</ul>
-			</div>
-
-			<div id = "topright" class = "topic doe right">
-				<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #1A5276;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Design of Experiments</h3>
-					<ul style = "position: relative; top:-100%; margin-left:5%">
-					<li><a href = "#matchedpairsdesign">Matched Pairs Design</a></li>
-					<li>Completely Randomized Designs</li>
-					<li>Factorial Designs</li>
-					<li>Nested Designs</li>
-					<li>Block Designs</li>
-					<li>Split Plot Designs</li>
-					<li>Propensity Score Analysis</li>
-					<li>Fixed and Random Effects</li>
-				</ul>
-			</div>	
-			
-			<!--
-			<div id = "midleft" class = "topic mathstat">
-			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -10%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #951602;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Mathematical Statistics</h3>
-				<ul style = "position: relative; top:-100%;">
-					<li>Maximium Likelihood Estimators</li>
-					<li>Method of Moments Estimators</li>
-				</ul>
-			</div>
-			-->
-			
-		</div>
-		
-		<div id = "container2" class = "container" >
-			
-			<div id = "bottomleft" class = "topic prob left">
-			<div class = "leftside" style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #951602;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Probability and Mathematical Statistics</h3>
-				<ul style = "position: relative; top:-100%; margin-left:5%">
-					<li>Discrete Distributions</li>
-					<li>Continuous Distributions</li>
-					<li>Bayes' Theorem</li>
-					<li>Maximium Likelihood Estimators</li>
-					<li>Method of Moments Estimators</li>
-				</ul>
-			</div>
-
-			<div id = "bottomright" class = "topic regression right">
-			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -5%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #C8BB06;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Regression</h3>
-				<ul style = "position: relative; top:-100%; margin-left:5%">
-					<li>Simple Linear Regression</li>
-					<li>Multiple Linear Regression</li>
-					<li>Regression Assumptions</li>
-					<li>Principal Components Analysis</li>
-					<li>Logistic Regression</li>
-					<li>Baseline Category Logit Models</li>
-					<li>Proportional Odds Models</li>
-					<li>Propensity Score Analysis</li>
-				</ul>
-			</div>	
-
-			<!--
-			<div id = "midright" class = "topic ml">
-			<div style="height: calc(100% + 10px); overflow: hidden; z-index:-1; margin-top:-5px; margin-left: -10%; position:abosolute;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 75%;"><path d="M107.22,-5.75 C3.39,47.53 210.50,130.43 -2.82,166.94 L0.00,150.00 L0.00,0.00 Z" style="stroke: none; fill: #C8BB06;"></path></svg></div>
-				<h3 class = topictitle style = "position: relative; top:-100%;">Machine Learning</h3>
-				<ul style = "position: relative; top:-100%;">
-					<li>Random Forrests</li>
-					<li>K-Nearest Neighbors</li>
-				</ul>
-			</div>
-			-->
-		</div>
-			
-		<div id = "container3" style = "display:none" class = "container">
-
-			<div id = "bottomleft" class = "topic">
-				<h3 class = topictitle>Stochastic Processes</h3>
-			</div>
-
-			<div id = "bottomcenter" class = "topic">
-				<h3 class = topictitle>Time Series Analysis</h3>
-			</div>	
-
-			<div id = "botomright" class = "topic">
-				<h3 class = topictitle>Spatial Statistics</h3>
-			</div>		
-		</div>
+	<div class = "sideContainer">
+		<script> createCards(); </script>
 	</div>
-	
-	<hr style = "margin:0; height:2px; border-color:black; background-color:black; width: calc(100% - 2px)">
-
+</div>
 </body>
+
 </html>
