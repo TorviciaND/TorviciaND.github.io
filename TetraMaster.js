@@ -67,10 +67,22 @@ function createCards(){
 var i;
 var j;
 for(i = 0; i < 5; i++){
-	let temp = new Card(getRandomColor(), Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.floor(Math.random() * 3), Math.floor(Math.random() * 3), true, false);
+	var power = Math.floor(Math.random() * 3);
+	var toughness = Math.floor(Math.random() * 3);
+	var arrowMultiplier = 1 -(power + toughness + 6)/15
+	let temp = new Card(getRandomColor(), Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, 
+	Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
+	power, toughness, true, false);
 	cardArray.push(temp);
-	let temp1 = new Card(getRandomColor(), Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.random() < 0.7, Math.floor(Math.random() * 3), Math.floor(Math.random() * 3), false, false);
+	
+	power = Math.floor(Math.random() * 3);
+	toughness = Math.floor(Math.random() * 3);
+	arrowMultiplier = 1 -(power + toughness + 1)/4
+	let temp1 = new Card(getRandomColor(), Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
+	Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
+	Math.random() < arrowMultiplier, power, toughness, false, false);
 	enemyArray.push(temp1);
+	
 	document.write("<div class = 'cardHolder' id = 'cardHolder"+ i + "' style = 'background:" + cardArray[i].picture + "'>");
 	document.getElementById("cardHolder"+i).addEventListener("click", cardClicked);
 	document.write("<div class = 'stats' style = 'color:white; position:relative; top:75%; left: 40%'>" + cardArray[i].offense + " " + cardArray[i].defense + "</div>");
