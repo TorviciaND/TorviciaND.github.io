@@ -16,6 +16,14 @@
 	margin-top:-4px;
 }
 
+.directions{
+	width: 300px;
+	margin-left:10px;
+	border: 1px black solid;
+	border-radius: 2px;
+	float:left;
+}
+
 .rowContainer{
 	width: 450px;
 	height:150px;

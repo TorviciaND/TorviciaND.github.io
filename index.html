@@ -16,13 +16,22 @@
 			usedSlots = blockers;
 			createBoard();
 			createScore();
-			
 		</script>
 	</div>
 	
 	<div class = "sideContainer">
-		<script> createCards(); </script>
+		<script> 
+			createCards(); 
+		</script>
 	</div>
+	<div class = "directions" id = "directions">
+		<ul>
+		<li>Click on a card and place it anywhere on the board where there isn't a gray blocker.</li>  
+		<li>If you place a card with an arrow pointing to an enemy arrow, the cards will fight.</li>
+		<li>The winning card will "cascade" their allegience to all cards that it points to.</li>
+		<li>If the enemy card does not have an arrow, your card will take it over.  Be careful though because all attacks must occur before takeovers, and if you lose a battle, your turn is over.</li>
+		</ul>
+	<div>
 </div>
 </body>
 

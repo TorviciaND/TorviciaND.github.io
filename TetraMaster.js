@@ -70,17 +70,39 @@ for(i = 0; i < 5; i++){
 	var power = Math.floor(Math.random() * 3);
 	var toughness = Math.floor(Math.random() * 3);
 	var arrowMultiplier = 1 -(power + toughness + 6)/15
-	let temp = new Card(getRandomColor(), Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, 
-	Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
+	var arrows = [8];
+	
+	for(k = 0; k < 7; k++){
+		arrows[k] = Math.random() < arrowMultiplier;
+	}
+	
+	if(eval(arrows.join('+')) < 1){
+		for(k = 0; k < 7; k++){
+			arrows[k] = Math.random() < arrowMultiplier;
+		}
+	}
+	
+	var cardStats = parseInt(eval(arrows.join('+'))/2) + 3*power + 3*toughness;
+	
+	let temp = new Card(getColor(cardStats), arrows[0], arrows[1], arrows[2], arrows[3], arrows[4], arrows[5], arrows[6], arrows[7],
 	power, toughness, true, false);
 	cardArray.push(temp);
 	
 	power = Math.floor(Math.random() * 3);
 	toughness = Math.floor(Math.random() * 3);
-	arrowMultiplier = 1 -(power + toughness + 1)/4
-	let temp1 = new Card(getRandomColor(), Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
-	Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier, Math.random() < arrowMultiplier,
-	Math.random() < arrowMultiplier, power, toughness, false, false);
+	arrowMultiplier = 1 -(power + toughness + 6)/15
+	
+		for(k = 0; k < 7; k++){
+		arrows[k] = Math.random() < arrowMultiplier;
+	}
+	
+	if(eval(arrows.join('+')) < 1){
+		for(k = 0; k < 7; k++){
+			arrows[k] = Math.random() < arrowMultiplier;
+		}
+	}
+	
+	let temp1 = new Card(getColor(cardStats), arrows[0], arrows[1], arrows[2], arrows[3], arrows[4], arrows[5], arrows[6], arrows[7], power, toughness, false, false);
 	enemyArray.push(temp1);
 	
 	document.write("<div class = 'cardHolder' id = 'cardHolder"+ i + "' style = 'background:" + cardArray[i].picture + "'>");
@@ -109,16 +131,6 @@ for(i = 1; i <=4; i++){
 
 }
 
-/*End Board Setup */
-
-function pauseBrowser(millis) {
-    var date = Date.now();
-    var curDate = null;
-    do {
-        curDate = Date.now();
-    } while (curDate-date < millis);
-}
-
 /*Select a card to move to the board and a board location for where to move that card */
 function cardClicked() {
 	isClicked = true;
@@ -136,6 +148,11 @@ function cardMoveTo() {
 /*End card select and move to */
 
 /*Create a random color for the cards.  This will later be replaced with card backgrounds */
+function getColor(stat){
+	colors = ["#FF0000", "#FF6000", "#FFBF00", "#DFFF00", "#80FF00", "#20FF00", "#00FF40", "#00FF9F", "#00FFFF", "#009FFF", "#0040FF", "#2000FF", "#8000FF", "#DF00FF", "#FF00BF", "#FF0060"]
+	return colors[stat-1];
+}
+
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -151,6 +168,8 @@ function placeCard(myCard, slot) {
 	var backgroundContent = document.getElementById(myCard).style.background;
 	var moveContent = document.getElementById(myCard).innerHTML;
 
+
+	
 	/* Put card HTML in selected slot */
 	var pasteHTML = "";
 	pasteHTML = pasteHTML + "<div class = 'card friend' id = 'card" + row + col + "' style = 'background:" + backgroundContent + "'>" + moveContent + "</div>";
@@ -391,6 +410,10 @@ function checkWin(){
 		else {
 			window.alert("It's a tie!");
 		}
+	}
+	
+		if(myCardTotal + theirCardTotal > 0){
+		document.getElementById('directions').style.display = "none";
 	}
 }
 
